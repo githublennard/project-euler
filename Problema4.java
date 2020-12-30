@@ -9,12 +9,11 @@ public class Problema4 {
     */
     public static void main(String[] args) {
         List<Integer> palindro = new ArrayList<Integer>();
-        int num1 = 800;//Se asume que el producto de estos dos numeros genera el mayor numero polindromico
+        int num1 = 800;
         int num2 = 800;
 
         while (num1 <= 999 && num2 <= 999) {
-//            System.out.println("Antes del For para num1: " + num1);
-            for (int aux = num1; aux <= 999; aux++) {//Establezco condicion para iterar entre los numeros
+            for (int aux = num1; aux <= 999; aux++) {
                 int multi = aux * num2;
                 String number = String.valueOf(multi);//Un numero lo separo por digitos// Es una especie de Casting??
                 char[] array = number.toCharArray();
