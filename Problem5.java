@@ -15,15 +15,15 @@ public class Problem5 {
 
     public static void main(String[] args) {    // Main method
         int i = 1, num1 = 1, num2 = 1;
-        int aux = 0;    //Declared outside the main scope in order to call outside the loop "while"
+        int aux = 0;
         while (i < 21) {
             System.out.println("num1:" + num1 + " y " + "num2:" + num2);
             System.out.println("Value of iterator: " + i);
             aux = lcm(num1, num2);
             System.out.println("The smallest positive number divisible by num1 and num2 is: " + aux + "\n");
-            num1 = aux;     //New value for num1
+            num1 = aux;
+            num2++;
             i++;
-            num2 = i;       //New value for num1
         }
         System.out.println("The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: " + aux);
     }

@@ -12,9 +12,6 @@ public class Problem4 {
     private static boolean isPalindrome(String number) {
         char[] array = number.toCharArray();
         return (array.length == 6 && array[5] == array[0] && array[4] == array[1] && array[3] == array[2]);
-      /*if (array.length == 6 && array[5] == array[0] && array[4] == array[1] && array[3] == array[2]) {    //Option Valid "If"
-          return true;
-      }else { return  false;}*/
     }
 
     public static void main(String[] args) {
@@ -23,7 +20,7 @@ public class Problem4 {
         int num2 = 999;
         while (num1 >= 100 && num2 >= 100 && palindro.size() < 100) {
             System.out.println("\n" + "Numeros que inician en el metodo checkNumbers: " + num1 + " and " + num2);
-            int aux = num2;//aux is a Number that will be on countdown
+            int aux = num2;
             while (aux >= 100) {
                 int product = num1 * aux;
                 String number = "" + product;
@@ -36,7 +33,6 @@ public class Problem4 {
             }
             num1--;
             num2--;
-
         }
         int maximo = Collections.max(palindro);
         System.out.println("Solucion del Ejercicio: " + maximo);
