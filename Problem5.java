@@ -13,18 +13,16 @@ public class Problem5 {
         return (a / gcd(a, b)) * b;
     }
 
-    public static void main(String[] args) {    // Main method
-        int i = 1, num1 = 1, num2 = 1;
-        int aux = 0;
-        while (i < 21) {
-            System.out.println("num1:" + num1 + " y " + "num2:" + num2);
-            System.out.println("Value of iterator: " + i);
-            aux = lcm(num1, num2);
-            System.out.println("The smallest positive number divisible by num1 and num2 is: " + aux + "\n");
-            num1 = aux;
+    public static void main(String[] args) {
+        int i, num1 = 1, num2 = 0;
+        int temporaryLCM = 0;
+        for (i = 1; i < 21; i++) {
+            System.out.println("Numbers to calculate LCM are num1: " + num1 + " and " + "num2: " + i);
+            temporaryLCM = lcm(num1, i);
+            System.out.println("The smallest positive number divisible by num1 and num2 is: " + temporaryLCM + "\n");
+            num1 = temporaryLCM;
             num2++;
-            i++;
         }
-        System.out.println("The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: " + aux);
+        System.out.println("The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: " + temporaryLCM);
     }
 }
