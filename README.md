@@ -1,4 +1,4 @@
-# ProjectEuler
+# Project Euler
 ### Are exercises to develop programming skills in Java Programming Language
 
 ````
